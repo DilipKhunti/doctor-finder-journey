@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
@@ -35,28 +36,28 @@ const Index = () => {
       name: "Dr. Aisha Patel",
       specialty: "Cardiologist",
       experience: "15+ years",
-      image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://source.unsplash.com/random/300x300/?doctor&seed=1",
     },
     {
       id: 2,
       name: "Dr. Rahul Sharma",
       specialty: "Dermatologist",
       experience: "10+ years",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://source.unsplash.com/random/300x300/?doctor&seed=2",
     },
     {
       id: 3,
       name: "Dr. Preeti Singh",
       specialty: "Pediatrician",
       experience: "12+ years",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://source.unsplash.com/random/300x300/?doctor&seed=3",
     },
     {
       id: 4,
       name: "Dr. Vikram Mehta",
       specialty: "Orthopedic",
       experience: "20+ years",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
+      image: "https://source.unsplash.com/random/300x300/?doctor&seed=4",
     },
   ];
 
@@ -110,7 +111,7 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-secondary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Get Matched with Doctors</h3>
@@ -120,7 +121,7 @@ const Index = () => {
             </div>
             
             <div className="text-center">
-              <div className="bg-accent/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-2xl font-bold">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Book an Appointment</h3>
@@ -183,16 +184,16 @@ const Index = () => {
                   <p>Create and manage your professional profile</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-secondary/10 p-2 rounded-full mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-secondary" viewBox="0 0 20 20" fill="currentColor">
+                  <div className="bg-primary/10 p-2 rounded-full mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
                   <p>Set your availability and manage your schedule</p>
                 </div>
                 <div className="flex items-start">
-                  <div className="bg-accent/10 p-2 rounded-full mr-4 mt-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-accent" viewBox="0 0 20 20" fill="currentColor">
+                  <div className="bg-primary/10 p-2 rounded-full mr-4 mt-1">
+                    <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-primary" viewBox="0 0 20 20" fill="currentColor">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   </div>
@@ -205,7 +206,7 @@ const Index = () => {
             </div>
             <div className="hidden md:block">
               <img 
-                src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+                src="https://source.unsplash.com/random/600x400/?doctor" 
                 alt="Doctor with patient" 
                 className="rounded-lg shadow-xl" 
               />
