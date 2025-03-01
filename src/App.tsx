@@ -14,6 +14,10 @@ import DoctorAvailability from "./pages/Doctor/Availability";
 import Profile from "./pages/Profile";
 import BookAppointment from "./pages/BookAppointment";
 import DoctorPage from "./pages/DoctorPage";
+import AboutUs from "./pages/AboutUs";
+import Contact from "./pages/Contact";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -33,6 +37,10 @@ const App = () => (
           <Route path="/book-appointment/:doctorId" element={<BookAppointment />} />
           <Route path="/doctor/profile" element={<DoctorProfile />} />
           <Route path="/doctor/availability" element={<DoctorAvailability />} />
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="/privacy" element={<Privacy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
