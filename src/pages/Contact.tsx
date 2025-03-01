@@ -35,11 +35,11 @@ const Contact = () => {
   return (
     <Layout>
       <div className="container mx-auto py-10 px-4">
-        <h1 className="text-3xl font-bold mb-8 text-center">Contact Us</h1>
+        <h1 className="text-3xl font-bold mb-8 text-center text-primary">Contact Us</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
-          <div>
-            <h2 className="text-2xl font-semibold mb-6">Get in Touch</h2>
+          <div className="bg-secondary/5 p-6 rounded-lg shadow-md">
+            <h2 className="text-2xl font-semibold mb-6 text-secondary">Get in Touch</h2>
             <p className="text-lg mb-8">
               Have questions or feedback? We'd love to hear from you. Fill out the form and our team will 
               get back to you as soon as possible.
@@ -51,17 +51,17 @@ const Contact = () => {
                 <span>support@docfinder.com</span>
               </div>
               <div className="flex items-center">
-                <Phone className="w-6 h-6 mr-3 text-primary" />
+                <Phone className="w-6 h-6 mr-3 text-secondary" />
                 <span>+91 1234567890</span>
               </div>
               <div className="flex items-center">
-                <MapPin className="w-6 h-6 mr-3 text-primary" />
+                <MapPin className="w-6 h-6 mr-3 text-accent" />
                 <span>123 Healthcare Avenue, Mumbai, India</span>
               </div>
             </div>
           </div>
           
-          <div>
+          <div className="bg-primary/5 p-6 rounded-lg shadow-md">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="space-y-2">
                 <Label htmlFor="name">Name</Label>
@@ -71,6 +71,7 @@ const Contact = () => {
                   onChange={(e) => setName(e.target.value)} 
                   placeholder="Your name" 
                   required 
+                  className="border-primary/20 focus-visible:ring-primary"
                 />
               </div>
               
@@ -83,6 +84,7 @@ const Contact = () => {
                   onChange={(e) => setEmail(e.target.value)} 
                   placeholder="Your email" 
                   required 
+                  className="border-primary/20 focus-visible:ring-primary"
                 />
               </div>
               
@@ -95,10 +97,11 @@ const Contact = () => {
                   placeholder="How can we help you?" 
                   rows={5} 
                   required 
+                  className="border-primary/20 focus-visible:ring-primary"
                 />
               </div>
               
-              <Button type="submit" className="w-full" disabled={isSubmitting}>
+              <Button type="submit" className="w-full bg-primary hover:bg-primary/90" disabled={isSubmitting}>
                 {isSubmitting ? "Sending..." : "Send Message"}
               </Button>
             </form>

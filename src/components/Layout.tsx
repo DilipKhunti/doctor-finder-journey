@@ -17,26 +17,26 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="border-b">
+      <header className="border-b bg-background">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
           <Link to="/" className="text-2xl font-bold text-primary">
             DocFinder
           </Link>
           
           <div className="hidden md:flex space-x-4 items-center">
-            <Link to="/search" className="hover:text-primary">
+            <Link to="/search" className="hover:text-primary transition-colors duration-200">
               Find a Doctor
             </Link>
-            <Link to="/doctors" className="hover:text-primary">
+            <Link to="/doctors" className="hover:text-secondary transition-colors duration-200">
               For Doctors
             </Link>
-            <Link to="/about" className="hover:text-primary">
+            <Link to="/about" className="hover:text-accent transition-colors duration-200">
               About Us
             </Link>
-            <Button asChild variant="outline" className="ml-2">
+            <Button asChild variant="outline" className="ml-2 border-primary/20 text-primary hover:text-primary hover:bg-primary/10">
               <Link to="/login">Login</Link>
             </Button>
-            <Button asChild>
+            <Button asChild className="bg-primary hover:bg-primary/90">
               <Link to="/signup">Sign Up</Link>
             </Button>
           </div>
@@ -46,7 +46,7 @@ const Layout = ({ children }: LayoutProps) => {
             onClick={toggleMenu}
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X /> : <Menu />}
+            {isMenuOpen ? <X className="text-primary" /> : <Menu className="text-primary" />}
           </button>
         </div>
         
@@ -58,20 +58,20 @@ const Layout = ({ children }: LayoutProps) => {
           )}
         >
           <div className="container mx-auto px-4 flex flex-col space-y-4">
-            <Link to="/search" className="hover:text-primary" onClick={toggleMenu}>
+            <Link to="/search" className="hover:text-primary transition-colors duration-200" onClick={toggleMenu}>
               Find a Doctor
             </Link>
-            <Link to="/doctors" className="hover:text-primary" onClick={toggleMenu}>
+            <Link to="/doctors" className="hover:text-secondary transition-colors duration-200" onClick={toggleMenu}>
               For Doctors
             </Link>
-            <Link to="/about" className="hover:text-primary" onClick={toggleMenu}>
+            <Link to="/about" className="hover:text-accent transition-colors duration-200" onClick={toggleMenu}>
               About Us
             </Link>
             <div className="flex flex-col space-y-2 pt-2">
-              <Button asChild variant="outline">
+              <Button asChild variant="outline" className="border-primary/20 text-primary hover:text-primary hover:bg-primary/10">
                 <Link to="/login" onClick={toggleMenu}>Login</Link>
               </Button>
-              <Button asChild>
+              <Button asChild className="bg-primary hover:bg-primary/90">
                 <Link to="/signup" onClick={toggleMenu}>Sign Up</Link>
               </Button>
             </div>
@@ -87,30 +87,30 @@ const Layout = ({ children }: LayoutProps) => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div>
-              <h3 className="text-lg font-bold mb-4">DocFinder</h3>
+              <h3 className="text-lg font-bold mb-4 text-primary">DocFinder</h3>
               <p className="text-muted-foreground">
                 Find the right doctor for your health needs with ease.
               </p>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Services</h3>
+              <h3 className="text-lg font-bold mb-4 text-secondary">Services</h3>
               <ul className="space-y-2">
-                <li><Link to="/search" className="text-muted-foreground hover:text-primary">Find Doctors</Link></li>
-                <li><Link to="/doctors" className="text-muted-foreground hover:text-primary">For Doctors</Link></li>
+                <li><Link to="/search" className="text-muted-foreground hover:text-primary transition-colors duration-200">Find Doctors</Link></li>
+                <li><Link to="/doctors" className="text-muted-foreground hover:text-secondary transition-colors duration-200">For Doctors</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Company</h3>
+              <h3 className="text-lg font-bold mb-4 text-accent">Company</h3>
               <ul className="space-y-2">
-                <li><Link to="/about" className="text-muted-foreground hover:text-primary">About Us</Link></li>
-                <li><Link to="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+                <li><Link to="/about" className="text-muted-foreground hover:text-accent transition-colors duration-200">About Us</Link></li>
+                <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors duration-200">Contact</Link></li>
               </ul>
             </div>
             <div>
-              <h3 className="text-lg font-bold mb-4">Legal</h3>
+              <h3 className="text-lg font-bold mb-4 text-secondary">Legal</h3>
               <ul className="space-y-2">
-                <li><Link to="/terms" className="text-muted-foreground hover:text-primary">Terms of Service</Link></li>
-                <li><Link to="/privacy" className="text-muted-foreground hover:text-primary">Privacy Policy</Link></li>
+                <li><Link to="/terms" className="text-muted-foreground hover:text-secondary transition-colors duration-200">Terms of Service</Link></li>
+                <li><Link to="/privacy" className="text-muted-foreground hover:text-accent transition-colors duration-200">Privacy Policy</Link></li>
               </ul>
             </div>
           </div>
