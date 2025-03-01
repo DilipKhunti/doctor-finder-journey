@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "@/components/Layout";
@@ -22,7 +21,7 @@ const BookAppointment = () => {
     experience: 15,
     fees: 1200,
     address: "Apex Hospital, Andheri West, Mumbai",
-    image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
+    image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80",
   };
   
   // Placeholder available time slots
@@ -120,7 +119,9 @@ const BookAppointment = () => {
                       <h3 className="font-medium">Select Time Slot</h3>
                     </div>
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
-                      {availableSlots.map((slot) => (
+                      {["09:00 AM", "09:30 AM", "10:00 AM", "10:30 AM", 
+                       "11:00 AM", "11:30 AM", "02:00 PM", "02:30 PM", 
+                       "03:00 PM", "03:30 PM", "04:00 PM", "04:30 PM"].map((slot) => (
                         <Badge
                           key={slot}
                           variant={selectedSlot === slot ? "default" : "outline"}
