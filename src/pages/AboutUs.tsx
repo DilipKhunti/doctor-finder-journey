@@ -1,5 +1,5 @@
 
-import { Layout } from "@/components/Layout";
+import Layout from "@/components/Layout";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 const AboutUs = () => {
